@@ -61,7 +61,8 @@ function ContentArea({ children }) {
 }
 
 // math function to plot
-const f = x => (Math.sin(x) + 2 * x) / x; // function should return ( sin(x) + 2x ) / x number by real x, angle measured in radian
+const f = x => (Math.sin(x) + 2 * x) / x; 
+// function should return ( sin(x) + 2x ) / x number by real x, angle measured in radian
 
 // Placeholder pages
 // TODO - outsource component
