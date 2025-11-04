@@ -67,31 +67,6 @@ const f = x => (Math.sin(x) + 2 * x) / x;
 // Placeholder pages
 // TODO - outsource component
 
-// TODO - outsource component
-const RechartsPage = props => <>
- <h2>React Charts Page</h2>
-    <div>TODO - draw Recharts LineChart</div>
-
-    <div>TODO - draw Recharts BarChart</div>
-
-    <div>TODO - draw Recharts PieChart in responsive container, colored by COLORS</div>
-
-    {/* Plot f function: */}
-    <div>TODO - plot f function by 1.5...3.2 domain and limes line</div>
-</>;
-// TODO - outsource component
-const GoogleChartsPage = props => <>
- <h2>Google Charts Page</h2>
- <div>TODO - insert Google LineChart with chartCommonData data</div>
- <div>TODO - insert Google column bar chart with chartCommonData data</div>
- <div>TODO - insert Google PieChart with chartCommonData data</div>
- </>;
-// TODO - outsource component
-const C3ChartsPage = props => <>
-  <h2>C3.js Charts Page</h2>
-  <C3LineChart todo="pass chartCommonData" />
-</>;
-
 export default function App() {
   let _mathPlotData = []
   /* TODO - prepare array for plotting function properly */
