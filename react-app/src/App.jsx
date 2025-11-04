@@ -8,11 +8,13 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
-// TODO import fgraphStatic image
+
+import C3LineChart from "./components/C3LineChart/C3LineChart";
+import fgraphStatic from "./assets/fgraphStatic.png";
 // TODO import chartCommonData, COLORS
 // TODO import LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Rectangle, PieChart, Pie, Cell, ReferenceLine from Recharts
 // TODO import Chart from React-Google-Charts
-import C3LineChart from "./components/C3LineChart/C3LineChart";
+
 
 // Main top menu bar
 function MainNav() {
@@ -59,22 +61,11 @@ function ContentArea({ children }) {
 }
 
 // math function to plot
-const f = x => x // TODO - function should return ( sin(x) + 2x ) / x number by real x, angle measured in radian
+const f = x => (Math.sin(x) + 2 * x) / x; // function should return ( sin(x) + 2x ) / x number by real x, angle measured in radian
 
 // Placeholder pages
 // TODO - outsource component
-const DataPage = () => <>
-  <h2>Data</h2>
-  <p><strong>Title:</strong> TODO chartCommonData title</p>
-  <p>
-    TODO table<br />
-    TODO header cells: Country, Unemployment rate [%]<br />
-    TODO body cells: chartCommonData data label, value<br />
-  </p>
-  <p>
-    <img src="TODO fgraphStatic" alt="fgraphStatic.png" />
-  </p>
-</>;
+
 // TODO - outsource component
 const RechartsPage = props => <>
  <h2>React Charts Page</h2>
