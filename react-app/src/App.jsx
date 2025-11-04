@@ -9,11 +9,16 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
 
+import DataPage from "./components/DataPage/DataPage.jsx";
+import RechartsPage from "./components/RechartsPage/RechartsPage.jsx";
+import GoogleChartsPage from "./components/GoogleChartsPage/GoogleChartsPage.jsx";
+import C3ChartsPage from "./components/C3ChartsPage/C3ChartsPage.jsx";
 import C3LineChart from "./components/C3LineChart/C3LineChart";
-import fgraphStatic from "./assets/fgraphStatic.png";
-// TODO import chartCommonData, COLORS
-// TODO import LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Rectangle, PieChart, Pie, Cell, ReferenceLine from Recharts
-// TODO import Chart from React-Google-Charts
+
+
+// import chartCommonData, COLORS
+// import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Rectangle, PieChart, Pie, Cell, ReferenceLine } from Recharts
+// import Chart from React-Google-Charts
 
 
 // Main top menu bar
