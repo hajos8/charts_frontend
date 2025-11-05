@@ -17,7 +17,6 @@ import C3LineChart from "./components/C3LineChart/C3LineChart";
 
 
 // import chartCommonData, COLORS
-// import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Rectangle, PieChart, Pie, Cell, ReferenceLine } from Recharts
 // import Chart from React-Google-Charts
 
 
@@ -65,7 +64,7 @@ function ContentArea({ children }) {
   );
 }
 
-// math function to plot
+const limes = 2;
 const f = x => (Math.sin(x) + 2 * x) / x; 
 // function should return ( sin(x) + 2x ) / x number by real x, angle measured in radian
 
@@ -76,6 +75,14 @@ export default function App() {
   let _mathPlotData = []
   /* TODO - prepare array for plotting function properly */
 
+  for(let x = -5; x <= 5; x += 0.5) {
+    let y = f(x);
+    if(!isFinite(y)){
+      y = limes + 1
+    }
+    _mathPlotData.push( { x: x, y: y } )
+  }
+
   const [mathPlotData, setMathPlotData] = useState(_mathPlotData)
 
   return (
@@ -84,11 +91,11 @@ export default function App() {
       <ChartsSubNav />
       <ContentArea>
         <Routes>
-          <Route path="/data" element={<DataPage todo="pass mathPlotData" />} />
-          <Route path="/charts/recharts" element={<RechartsPage todo="pass mathPlotData" />} />
-          <Route path="/charts/google" element={<GoogleChartsPage todo="pass mathPlotData" />} />
-          <Route path="/charts/c3" element={<C3ChartsPage todo="pass mathPlotData" />} />
-          <Route path="*" element={<DataPage todo="pass mathPlotData" />} />
+          <Route path="/data" element={<DataPage  MathPlotData={mathPlotData} />} />
+          <Route path="/charts/recharts" element={<RechartsPage MathPlotData={mathPlotData} />} />
+          <Route path="/charts/google" element={<GoogleChartsPage MathPlotData={mathPlotData} />} />
+          <Route path="/charts/c3" element={<C3ChartsPage MathPlotData={mathPlotData} />} />
+          <Route path="*" element={<DataPage MathPlotData={mathPlotData} />} />
         </Routes>
       </ContentArea>
     </Router>
